@@ -39,7 +39,7 @@ It should be green, else check the dimmylockrc file to match your signed user ha
 
 **NOTE**: this is for single KDE user, not tested for multiple users.
 
-**NOTE**: Make sure power management like:
+**NOTE**: Make sure power management is configure with:
 - external monitors
 - laptop lid close events is set to Do nothing + "Even when an external monitor is connected.
 - Screen energy saving is off
@@ -48,9 +48,9 @@ We can simply just lock the screen on demand and power usage will be avoided.
 
 ## TODOS:
 
-- [] Test laptops with lid enabled and external monitors, to make a hook to run our script
-- Test screen savers whether our hook will run
-- Test on wayland and add supprot if needed or if possible
+- [ ] Test laptops with lid enabled and external monitors, to make a hook to run our script
+- [ ] Test screen savers whether our hook will run
+- [ ] Test on wayland and add supprot if needed or if possible
 
 
 ## Usage
