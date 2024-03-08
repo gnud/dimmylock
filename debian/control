@@ -1,0 +1,8 @@
+Package: dimmylock
+Version: 1.0
+Section: base
+Priority: optional
+Architecture: all
+Depends: dbus, python3, x11-xserver-utils
+Maintainer: Damjan Dimitrioski <damjandimitrioski@gmail.com>
+Description: Service that wait for screen lock events in KDE/sddm and then turns the monitors off until keyboard/mouse interuption

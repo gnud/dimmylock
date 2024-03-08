@@ -1,0 +1,20 @@
+#!/bin/bash
+
+USERNAME=$1
+USERUID=$2
+
+function run_monitor(){
+  export XDG_RUNTIME_DIR="/run/user/$1"
+  export DBUS_SESSION_BUS_ADDRESS="unix:path=${XDG_RUNTIME_DIR}/bus"
+
+  dbus-monitor --session "type='signal',interface='org.freedesktop.ScreenSaver'" |
+  while read x; do
+    case "$x" in
+      *"boolean true"*) /usr/bin/python3 -c "import subprocess; subprocess.run(['xset', 'dpms', 'force', 'off'])";;
+    esac
+  done
+}
+
+FUNC=$(declare -f run_monitor)
+
+sudo -u ${USERNAME} bash -c "$FUNC; run_monitor ${USERUID}"

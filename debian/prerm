@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Stop the service before removing the package
+systemctl stop dimmylock.service
+
+# Disable the service
+systemctl disable dimmylock.service
+
+exit 0

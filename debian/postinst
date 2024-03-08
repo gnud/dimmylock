@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Unmask the service in case it was previously masked
+systemctl unmask dimmylock.service
+
+# Enable and start the service
+systemctl enable dimmylock.service
+systemctl start dimmylock.service
+
+exit 0

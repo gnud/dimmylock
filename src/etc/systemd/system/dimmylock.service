@@ -1,0 +1,15 @@
+[Unit]
+Description=Dim screen on lock
+PartOf=graphical-session.target
+
+[Service]
+Restart=on-failure
+Type=simple
+Slice=session.slice
+TimeoutSec=40sec
+Environment=DISPLAY=:0
+EnvironmentFile=/etc/dimmylockrc
+ExecStart=/usr/local/bin/dimmylock ${ARG1} ${ARG2}
+
+[Install]
+WantedBy=graphical-session.target
