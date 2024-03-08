@@ -14,7 +14,7 @@ To circumvent this issue, we implement a solution that monitors for the lock eve
 
 Upon detecting this event, we execute: ```xset dpms force off``` to make sure it watis for Screen lock.
 
-The event signal listener is start with a systemd service.
+The event signal listener is started via a systemd service and automatically enabled on install.
 
 Before starting, pleas configure the:
 /etc/dimmylockrc file:
