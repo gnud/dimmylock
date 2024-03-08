@@ -55,7 +55,7 @@ We can simply just lock the screen on demand and power usage will be avoided.
 
 ## Usage
 
-In KDE using the lock global shorcut Control + Alt + L (or any custom combination you have), will trigger the lock signal and run the command to turns off the monitors.
+In KDE using the lock global shorcut Control + Alt + L (or your custom combination), will trigger the lock signal and run the command that turns off the monitors.
 
 After initiating this process, all screens will become blank within a few milliseconds. To reactivate the screens, simply move your mouse like crazy for a few seconds.
 Be aware that some screens might take a bit longer to wake up due to variances in monitor behavior or graphics driver responses.
